@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style2.css">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8 m-md-auto">
+                <div class="alert" id="alert" role="alert">
+
+                </div>
+
+            </div>
+
+            <div class="col-md-8 m-md-auto">
+                <form onsubmit="return Calculate()">
+                    <div class="table-responsive-sm">
+                        <table class="table align-middle table-bordered">
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>Name</label></td>
+                                    <td><input type="text" class="form-control" placeholder="Name" id="Name"></td>
+                                </div>
+
+                            </tr>
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>Password</label></td>
+                                    <td><input type="Password" class="form-control" placeholder="Password"
+                                            id="Password">
+                                        <small class="form-text text-info">Your password should be between 8 and
+                                            20</small>
+                                    </td>
+                                </div>
+
+                            </tr>
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>Country</label></td>
+                                    <td>
+                                        <select name="Country" id="Country" class="form-select">
+                                            <option value="">----Select----</option>
+                                            <option value="Ind">India</option>
+                                            <option value="Pak">Pakistan</option>
+                                            <option value="Afg">Afghanistan</option>
+                                        </select>
+                                    </td>
+                                </div>
+
+                            </tr>
+
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>Messages</label></td>
+                                    <td><textarea name="" id="Messaged" class="form-control"
+                                            placeholder="Write some message"></textarea></td>
+                                </div>
+
+                            </tr>
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>Email</label></td>
+                                    <td><input type="text" class="form-control-palintext" value="soumya@gmail.com"
+                                            readonly>
+                                    </td>
+                                </div>
+
+                            </tr>
+                            
+
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>Date Time</label></td>
+                                    <td>
+                                        <input type="date" class="form-control" >
+                                           
+                                    </td>
+                                </div>
+
+                            </tr>
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>File Upload</label></td>
+                                    <td><input type="file" class="form-control-file"></td>
+                                </div>
+
+                            </tr>
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>Range</label></td>
+                                    <td><input type="range" class="form-control-range"></td>
+                                </div>
+
+                            </tr>
+                            <tr>
+                                <div class="form-check">
+                                    <td><label>Hobby</label></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input hobbies" checked> Music
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input hobbies"> Sports
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input hobbies" disabled> Books
+
+                                        </div>
+
+                                    </td>
+                                </div>
+
+                            </tr>
+
+                            <tr>
+                                <div class="form-check">
+                                    <td><label>Gender</label></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="gender" id="male"> Male
+
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="gender" id="female">
+                                            Female
+
+                                        </div>
+
+                                    </td>
+                                </div>
+
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <!-- <input type="submit" class="btn btn-success" value="Submit"> -->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        Submit
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Submission Permission
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Do you want to Submit?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-warning"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <input type="Submit" class="btn btn-success" data-bs-dismiss="modal"
+                                                        value="Submit"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </form>
+
+
+
+            </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <div class="container my-5" style="border: 5px solid orangered; border-radius:15px;">
+        <div class="row p-3">
+            <form action="">
+                <div class="form-group row my-4">
+                    <label class="col-md-2 col-form-label">Username</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" placeholder="Username">
+
+                    </div>
+
+
+                </div>
+
+                <div class="form-group row my-4">
+                    <label class="col-md-2 col-form-label">Password</label>
+                    <div class="col-md-10">
+                        <input type="Password" class="form-control" placeholder="Username">
+
+                    </div>
+
+
+                </div>
+
+                <div class="form-group row my-4">
+                    <label class="col-md-2 col-form-label">Country</label>
+                    <div class="col-md-10">
+                        <select name="Country" id="Country" class="form-select">
+                            <option value="">----Select----</option>
+                            <option value="Ind">India</option>
+                            <option value="Pak">Pakistan</option>
+                            <option value="Afg">Afghanistan</option>
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+                <div class="form-group row my-4">
+                    <label class="col-md-2 col-form-label">Country</label>
+                    <div class="col-md-10">
+                        <textarea name="" id="Messaged" class="form-control" placeholder="Write some message"></textarea>
+
+                    </div>
+
+
+                </div>
+
+                <div class="form-group row my-4">
+                    <label class="col-md-2 col-form-label">Range</label>
+                    <div class="col-md-10 mt-md-2">
+                        <input type="range" class="form-control-range">
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-group row my-4">
+                    <label class="col-md-2 col-form-label">Hobby</label>
+                    <div class="col-md-10">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input hobbies" checked> Music
+
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input hobbies"> Sports
+
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input hobbies" disabled> Books
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="form-group row my-4">
+                    <label class="col-md-2 col-form-label">Gender</label>
+                    <div class="col-md-10">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="gender" id="male"> Male
+
+                        </div>
+
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="gender" id="female">
+                            Female
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="form-group row my-4">
+                    <div class="col-md-12 mt-md-2">
+                        <input type="submit" class="btn btn-info" value="Submit">
+                    </div>
+
+
+                </div>
+
+
+                
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
+    <script src="form.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+#row1
+{
+    background-color: brown;
+    padding: 25px 10px;
+}
+#row2
+{
+    background-color:moccasin;
+    /* padding-left: 10px; */
+    
+}
+li{
+    display: inline-block;
+    
+    padding-top:10px;
+
+}
+
+
+#content
+{
+    background-color:grey;
+    color:white;
+    
+    
+}
+
+#contentlist
+{
+    background-color:lightgray;
+    padding-top:47px;
+   
+}
+#footer
+{
+    background-color:moccasin;
+    padding:10px 5px;
+    color: green;
+    text-align: right;
+}
